@@ -7,7 +7,7 @@ import { UserStore } from "./userStore";
 export class AdminStore extends Store {
   @Restrict("r")
   public user: UserStore;
-  @Restrict()
+  @Restrict("none")
   name: string = "John Doe";
   @Restrict("rw")
   getCredentials = lazy(() => {
